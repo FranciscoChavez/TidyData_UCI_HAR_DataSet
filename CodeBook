@@ -1,0 +1,52 @@
+# CodeBook
+
+# Files required for this project
+
+A description of the dataset can be obtained at this site: 
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+
+The files for the projects can found here:
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+The following data files are required to conduct this project:
+  - subject_test.txt
+  - X_test.txt
+  - y_test.txt
+  - subject_train.txt
+  - X_train.txt
+  - y_train.txt
+  
+  -features.txt
+  -features_info.txt
+  -activity_labels.txt
+  
+  
+The following transformations and mergers were performed
+  
+  - The x_test.txt and x_train.txt were merged into one dataset called xsignals which represent variables. 
+  - The y_test.txt and y_train.txt were merged into one dataset called ysignals which represents activities.
+  - The subject_test.txt and subject_train.txt were merged into one datase called subjects.
+  - The features.txt was used to set the names of the xsignals dataset.
+  - The measurements on the meand and standard deviation were stracted from the xsignals dataset.
+  - The subject, x_signals and y_signalst datesets were merged into a new dataset called data.
+  - The acativlity_labels.txt file was used to label activity data. The following lables 
+    were used:WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING.
+  - The following variable names were re-labeled for improved description of data:
+      -X to XAxis
+      -Y to YAxis
+      -Z to ZAxis
+      -mean to Mean
+      -std to StandardDeviation
+      -tbody to Body
+      -BodyBody to Body
+      -tBody to Body
+      -fBody to FFTBody
+      -tGravity to Gravity
+      -fGravity to FFTGravity
+      -ACC to Acceleration
+      -GYRO to Angular Velocity
+      -Mag to Magniture
+  - The data was Grouped by subject and activity
+  - The data was summarized by average of each variable
+  
+      
